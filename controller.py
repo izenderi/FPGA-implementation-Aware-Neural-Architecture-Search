@@ -6,10 +6,12 @@ import time
 import pprint
 from collections import OrderedDict
 from keras import backend as K
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import os
 if not os.path.exists('weights/'):
     os.makedirs('weights/')
+
+tf.disable_v2_behavior()
 
 
 class StateSpace:

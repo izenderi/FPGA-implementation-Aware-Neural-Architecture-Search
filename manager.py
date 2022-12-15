@@ -6,7 +6,8 @@ import numpy as np
 from keras.models import Model
 from keras import backend as K
 from keras.callbacks import ModelCheckpoint
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 class NetworkManager:
     '''

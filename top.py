@@ -10,7 +10,7 @@ The NAS engine is partially based on Somshubra Majumdar's open source NAS projec
 '''
 import numpy as np
 import csv
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 from keras import backend as K
 from keras.datasets import cifar10
 from keras.datasets import mnist
@@ -31,6 +31,9 @@ from math import *
 import csv
 import time
 import copy 
+
+
+tf.disable_v2_behavior()
 
 # create a shared session between Keras and Tensorflow
 policy_sess = tf.Session()
